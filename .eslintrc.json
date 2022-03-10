@@ -1,0 +1,71 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:storybook/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "overrides": [
+      {
+        "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+        "rules": {
+          "storybook/hierarchy-separator": "error",
+          "storybook/default-exports": "off"
+        }
+      }
+    ],
+    "rules": {
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "always",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+        ],
+        "prettier/prettier": "error",
+        "@typescript-eslint/explicit-function-return-type": 1,
+        "@typescript-eslint/no-unused-vars": 1,
+        "no-restricted-exports": "off",
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-filename-extension": [
+          1,
+          { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+        ],
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
+        "react/function-component-definition": "off",
+        "react/button-has-type": "off",
+        "react/default-props-match-prop-types": "off",
+        "react/jsx-props-no-spreading": "off"
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      }
+}
