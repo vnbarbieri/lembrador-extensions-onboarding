@@ -10,7 +10,7 @@ const exclude = ['node_modules', 'lib', 'src/**/*stories.tsx', 'src/**/*test.*']
 const tsConfig = { noEmit: true, declaration: true, declarationDir: './lib', rootDir: 'src/', exclude };
 
 export default {
-  input: ['src/index.ts'],
+  input: 'src/index.ts',
   output: { format: 'esm', dir: 'lib', preserveModules: true, preserveModulesRoot: 'src' },
   plugins: [...plugins, typescript(tsConfig)],
 };
